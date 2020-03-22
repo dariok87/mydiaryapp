@@ -12,7 +12,7 @@ function App() {
             <img src="screenshot" className="screenshot" alt="screenshot" />
           </div>
           <div className="right">
-            <p>Log your daily activities in this app!</p>
+            <p>Log your daily activities</p>
             <button>Start</button>
           </div>
         </div>
