@@ -1,4 +1,5 @@
-body {
+body,
+button {
   font-family: "Fresca", sans-serif;
 }
 
@@ -24,10 +25,32 @@ body {
 
 .Homepage .container {
   display: grid;
+  width: 50%;
   grid-template-columns: 50% 50%;
 }
 
 .Homepage .container .left img {
   width: 100%;
   max-width: 300px;
+  text-align: left;
+  padding-left: 50px;
+}
+
+.Homepage .container .right p {
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+}
+
+.Homepage .container .right button {
+  background-color: green;
+  font-size: 2rem;
+  padding: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  border-color: transparent;
+}
+
+.Homepage .container .right button:hover {
+  cursor: pointer;
 }
