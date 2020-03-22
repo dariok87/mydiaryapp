@@ -6,17 +6,14 @@ body {
   text-align: center;
 }
 
-.App-logo {
+.Homepage-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-}
-
-.App-header {
+.Homepage {
   background-color: #fff;
-  min-height: 100vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,15 +22,12 @@ body {
   color: #000;
 }
 
-.App-link {
-  color: #61dafb;
+.Homepage .container {
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Homepage .container .left img {
+  width: 100%;
+  max-width: 300px;
 }
