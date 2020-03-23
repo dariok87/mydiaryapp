@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import logo from "./img/logo.jpg";
 import "./App.css";
 
-const addActivity = () => {
-  alert("test");
-};
+const Homepage = ({ setScreen }) => {
+  const addActivity = () => {
+    setScreen("addActivity");
+  };
 
-const Homepage = () => {
   return (
     <header className="Homepage">
       <img src={logo} className="Homepage" alt="logo" />
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div className="App">
-      {screen === "homepage" && <Homepage />}
+      {screen === "homepage" && <Homepage setScreen={setScreen} />}
       {screen === "addActivity" && <AddActivity />}
     </div>
   );
