@@ -27,7 +27,7 @@ const AddActivity = () => {
   return <p>Add Activity</p>;
 };
 
-function App() {
+const App = () => {
   const [screen, setScreen] = useState("homepage");
 
   return (
@@ -36,6 +36,6 @@ function App() {
       {screen === "addActivity" && <AddActivity />}
     </div>
   );
-}
+};
 
 export default App;
