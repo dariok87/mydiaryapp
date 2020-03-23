@@ -23,13 +23,17 @@ const Homepage = () => {
   );
 };
 
+const AddActivity = () => {
+  return <p>Add Activity</p>;
+};
+
 function App() {
   const [screen, setScreen] = useState("homepage");
 
   return (
     <div className="App">
       {screen === "homepage" && <Homepage />}
-      {screen === "addActivity" && <addActivity />}
+      {screen === "addActivity" && <AddActivity />}
     </div>
   );
 }
