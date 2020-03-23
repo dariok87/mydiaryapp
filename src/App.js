@@ -2,6 +2,10 @@ import React from "react";
 import logo from "./img/logo.jpg";
 import "./App.css";
 
+const addActivity = () => {
+  alert("test");
+};
+
 function App() {
   return (
     <div className="App">
@@ -13,10 +17,9 @@ function App() {
           </div>
           <div className="right">
             <p>Log your daily activities</p>
-            <button>Start</button>
+            <button onClick={addActivity}>Start</button>
           </div>
         </div>
-        <p>hello world!</p>
       </header>
     </div>
   );
