@@ -69,6 +69,7 @@ button {
   text-transform: uppercase;
   color: #fff;
   border-color: transparent;
+  cursor: pointer;
 }
 
 .AddActivity textarea {
@@ -79,6 +80,6 @@ button {
 .AddActivity button,
 .AddActivity textarea,
 .AddActivity input,
-.AddActivity h2 {
-  display: ;
+.AddActivity h1 {
+  display: block;
 }
