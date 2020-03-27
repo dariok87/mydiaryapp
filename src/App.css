@@ -54,3 +54,31 @@ button {
 .Homepage .container .right button:hover {
   cursor: pointer;
 }
+
+.AddActivity {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.AddActivity button {
+  background-color: green;
+  font-size: 2rem;
+  padding: 5px;
+  text-transform: uppercase;
+  color: #fff;
+  border-color: transparent;
+}
+
+.AddActivity textarea {
+  padding-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+.AddActivity button,
+.AddActivity textarea,
+.AddActivity input,
+.AddActivity h2 {
+  display: ;
+}
