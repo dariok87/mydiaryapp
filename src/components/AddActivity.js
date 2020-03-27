@@ -1,12 +1,14 @@
 import React from "react";
 
 const AddActivity = () => {
+  const saveActivity = () => {};
   return (
     <div className="AddActivity">
       <h1>Activity title</h1>
       <input />
       <h1>Activity description</h1>
       <textarea></textarea>
+      <button onClick={saveActivity}>Save Activity</button>
     </div>
   );
 };
