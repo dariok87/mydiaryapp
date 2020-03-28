@@ -4,17 +4,14 @@ import Homepage from "./components/Homepage";
 import AddActivity from "./components/AddActivity";
 import { openDB } from "idb";
 
-const storeActivity = async ({ title, description }) => {
-  console.log(title, description);
-
+const storeActivity = async activity => {
   const dbName = "diary.lol";
   const storeName = "activities";
   const version = 1;
 
-  await openDB(dbName, version, {
+  const db = await openDB(dbName, version, {
     upgrade(db, oldVersion, newVersion, transaction) {
       const store = db.createObjectStore(storeName, { autoIncrement: true });
-      store.put(activity);
     }
   });
 };
