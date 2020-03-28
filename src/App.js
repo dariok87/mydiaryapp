@@ -25,7 +25,9 @@ const App = () => {
   return (
     <div className="App">
       {screen === "homepage" && <Homepage setScreen={setScreen} />}
-      {screen === "addActivity" && <AddActivity />}
+      {screen === "addActivity" && (
+        <AddActivity storeActivity={storeActivity} />
+      )}
     </div>
   );
 };

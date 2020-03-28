@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 
-const AddActivity = () => {
+const AddActivity = ({ storeActivity }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const saveActivity = () => {};
+  const saveActivity = () => {
+    storeActivity({ title, description });
+  };
 
   return (
     <div className="AddActivity">
