@@ -11,9 +11,15 @@ const storeActivity = async activity => {
 
   const db = await openDB(dbName, version, {
     upgrade(db, oldVersion, newVersion, transaction) {
-      const store = db.createObjectStore(storeName, { autoIncrement: true });
+      db.createObjectStore(storeName, { autoIncrement: true });
     }
   });
+
+  const tx = await db.transaction(storeName, "readwrite");
+  const store = await tx.objectStore(storeName);
+
+  await store.put(activity);
+  await tx.done;
 };
 
 const App = () => {
