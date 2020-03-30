@@ -1,6 +1,6 @@
 import React from "react";
 
-const Activities = ({ acttivities }) => {
+const Activities = ({ activities }) => {
   return (
     <div className="Activities">
       <div className="List"></div>
