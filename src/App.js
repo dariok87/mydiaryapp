@@ -7,6 +7,19 @@ import Activities from "./components/Activities";
 
 const activities = [];
 
+const initDatabase = async () => {
+  const dbName = "diary.lol";
+  const storeName = "activities";
+  const version = 1;
+
+  const db = await openDB(dbName, version, {
+    upgrade(db, oldVersion, newVersion, transaction) {
+      db.createObjectStore(storeName, { autoIncrement: true });
+    }
+  });
+  return db;
+};
+
 const storeActivity = async activity => {
   const dbName = "diary.lol";
   const storeName = "activities";
