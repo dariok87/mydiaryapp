@@ -3,6 +3,9 @@ import "./App.css";
 import Homepage from "./components/Homepage";
 import AddActivity from "./components/AddActivity";
 import { openDB } from "idb";
+import Activities from "./components/Activities";
+
+const activities = [];
 
 const storeActivity = async activity => {
   const dbName = "diary.lol";
@@ -31,6 +34,7 @@ const App = () => {
       {screen === "addActivity" && (
         <AddActivity storeActivity={storeActivity} />
       )}
+      {screen === "activities" && <Activities activities={activities} />}
     </div>
   );
 };
