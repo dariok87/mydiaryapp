@@ -51,6 +51,7 @@ const storeActivity = async activity => {
 
 const App = () => {
   const [screen, setScreen] = useState("homepage");
+  const activities = initActivities();
 
   return (
     <div className="App">
