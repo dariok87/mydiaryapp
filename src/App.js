@@ -21,30 +21,17 @@ const initDatabase = async () => {
 };
 
 const initActivities = async () => {
-  const db = initDatabase();
-  const tx = await db.transaction(activities, "readwrite");
-  const activities = tx
-    .objectStore("activities")
-    .getAll()
-    .getAll();
+  const db = await initDatabase();
+  const tx = await db.transaction("activities", "readonly");
+  const activities = tx.objectStore("activities").getAll();
   await tx.done;
   return activities;
 };
 
 const storeActivity = async activity => {
-  const dbName = "diary.lol";
-  const storeName = "activities";
-  const version = 1;
-
-  const db = await openDB(dbName, version, {
-    upgrade(db, oldVersion, newVersion, transaction) {
-      db.createObjectStore(storeName, { autoIncrement: true });
-    }
-  });
-
-  const tx = await db.transaction(activities, "readwrite");
-  const store = await tx.objectStore(activities);
-
+  const db = initDatabase();
+  const tx = await db.transaction("activities", "readwrite");
+  const store = await tx.objectStore("activities");
   await store.put(activity);
   await tx.done;
 };
