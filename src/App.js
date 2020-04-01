@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Homepage from "./components/Homepage";
 import AddActivity from "./components/AddActivity";
@@ -38,7 +38,14 @@ const storeActivity = async activity => {
 
 const App = () => {
   const [screen, setScreen] = useState("homepage");
-  const activities = initActivities();
+  const [activities, setActivities] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const activities = await initActivities();
+      setActivities(activities);
+    })();
+  });
 
   return (
     <div className="App">
