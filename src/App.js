@@ -20,6 +20,10 @@ const initDatabase = async () => {
   return db;
 };
 
+const initActivities = () => {
+  const db = initDatabase();
+};
+
 const storeActivity = async activity => {
   const dbName = "diary.lol";
   const storeName = "activities";
@@ -31,8 +35,8 @@ const storeActivity = async activity => {
     }
   });
 
-  const tx = await db.transaction(storeName, "readwrite");
-  const store = await tx.objectStore(storeName);
+  const tx = await db.transaction(activities, "readwrite");
+  const store = await tx.objectStore(activities);
 
   await store.put(activity);
   await tx.done;
