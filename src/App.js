@@ -20,8 +20,15 @@ const initDatabase = async () => {
   return db;
 };
 
-const initActivities = () => {
+const initActivities = async () => {
   const db = initDatabase();
+  const tx = await db.transaction(activities, "readwrite");
+  const activities = tx
+    .objectStore("activities")
+    .getAll()
+    .getAll();
+  await tx.done;
+  return activities;
 };
 
 const storeActivity = async activity => {
