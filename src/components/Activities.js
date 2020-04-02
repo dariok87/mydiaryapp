@@ -6,15 +6,17 @@ const Activities = ({ activities }) => {
     <div
       className="Activities"
       css={css`
-        background-color: yellow;
-        font-size: 26px;
-        height: 180px;
+        display: grid;
+        grid-template-columns: 300px auto;
+        width: 100vw;
+        height: 100vh;
       `}
     >
       <ul
         className="List"
         css={css`
-          background-color: blue;
+          border-right: 1px solid black;
+          height: 100%;
         `}
       >
         {activities.map((activity, index) => {
