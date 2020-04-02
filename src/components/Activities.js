@@ -1,5 +1,3 @@
-//import React from "react";
-
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
@@ -8,6 +6,7 @@ const Activities = ({ activities }) => {
     <div
       className="Activities"
       css={css`
+        background-color: yellow;
         font-size: 26px;
       `}
     >
