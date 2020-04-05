@@ -28,6 +28,8 @@ const Activities = ({ activities }) => {
               css={css`
                 padding: 20px;
                 border-bottom: 1px solid black;
+                &:hover {
+                  background-color: grey;
               `}
             >
               {activity.title}
