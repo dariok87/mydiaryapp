@@ -29,7 +29,8 @@ const Activities = ({ activities }) => {
                 padding: 20px;
                 border-bottom: 1px solid black;
                 &:hover {
-                  background-color: grey;
+                  background-color: lightgrey;
+                  cursor: pointer;
               `}
             >
               {activity.title}
