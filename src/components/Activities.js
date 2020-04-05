@@ -10,6 +10,10 @@ const Activities = ({ activities }) => {
         grid-template-columns: 300px auto;
         width: 100vw;
         height: 100vh;
+
+        @media (min-width: 1000px) {
+          font-size: 50px;
+        }
       `}
     >
       <ul
