@@ -18,8 +18,6 @@ const Activities = ({ activities }) => {
           border-right: 1px solid black;
           height: 100%;
           text-align: left;
-          padding-left: 20px;
-          padding: 30px;
           list-style-type: none;
         `}
       >
