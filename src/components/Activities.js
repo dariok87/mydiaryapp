@@ -17,10 +17,24 @@ const Activities = ({ activities }) => {
         css={css`
           border-right: 1px solid black;
           height: 100%;
+          text-align: left;
+          padding-left: 20px;
+          padding: 30px;
+          list-style-type: none;
         `}
       >
         {activities.map((activity, index) => {
-          return <li key={index}>{activity.title}</li>;
+          return (
+            <li
+              key={index}
+              css={css`
+                padding: 20px;
+                border-bottom: 1px solid black;
+              `}
+            >
+              {activity.title}
+            </li>
+          );
         })}
       </ul>
 
