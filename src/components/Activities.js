@@ -43,6 +43,22 @@ const Activities = ({ activities }) => {
         })}
       </ul>
 
+      <ul
+        css={css`
+          grid-area: sidebar-mobile;
+          border-right: 1px solid black;
+          height: 100%;
+          text-align: left;
+          list-style-type: none;
+
+          @media (min-width: 800px) {
+            display: none;
+          }
+        `}
+      >
+        something
+      </ul>
+
       <div className="Detail"></div>
     </div>
   );
