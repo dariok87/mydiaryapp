@@ -25,6 +25,10 @@ const Activities = ({ activities }) => {
           height: 100%;
           text-align: left;
           list-style-type: none;
+
+          @media (max-width: 800px) {
+            display: none;
+          }
         `}
       >
         {activities.map((activity, index) => {
