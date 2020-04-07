@@ -11,14 +11,16 @@ const Activities = ({ activities }) => {
         width: 100vw;
         height: 100vh;
 
-        @media (min-width: 1000px) {
-          font-size: 50px;
+        @media (max-width: 1000px) {
+          fgrid-template-columns: 50px auto;
+          grid-template-areas: "sidebar-mobile main";
         }
       `}
     >
       <ul
         className="List"
         css={css`
+          grid-area: sidebar-desktop;
           border-right: 1px solid black;
           height: 100%;
           text-align: left;
