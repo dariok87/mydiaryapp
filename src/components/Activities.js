@@ -12,7 +12,7 @@ const Activities = ({ activities }) => {
         height: 100vh;
 
         @media (max-width: 1000px) {
-          fgrid-template-columns: 50px auto;
+          grid-template-columns: 80px auto;
           grid-template-areas: "sidebar-mobile main";
         }
       `}
