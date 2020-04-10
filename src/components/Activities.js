@@ -62,10 +62,52 @@ const Activities = ({ activities }) => {
           }
         `}
       >
-        something
+        <div id="menuToggle">
+          <span
+            css={css`
+              display: block;
+              width: 33px;
+              height: 4px;
+              margin-bottom: 5px;
+              position: relative;
+              background: #cdcdcd;
+              border-radius: 3px;
+              z-index: 1;
+            `}
+          ></span>
+          <span
+            css={css`
+              display: block;
+              width: 33px;
+              height: 4px;
+              margin-bottom: 5px;
+              position: relative;
+              background: #cdcdcd;
+              border-radius: 3px;
+              z-index: 1;
+            `}
+          ></span>
+          <span
+            css={css`
+              display: block;
+              width: 33px;
+              height: 4px;
+              margin-bottom: 5px;
+              position: relative;
+              background: #cdcdcd;
+              border-radius: 3px;
+              z-index: 1;
+            `}
+          ></span>
+        </div>
       </ul>
 
-      <div className="Detail"></div>
+      <div
+        className="Detail"
+        css={css`
+          grid-area: main;
+        `}
+      ></div>
     </div>
   );
 };
