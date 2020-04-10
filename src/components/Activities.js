@@ -62,7 +62,14 @@ const Activities = ({ activities }) => {
           }
         `}
       >
-        <div id="menuToggle">
+        <div
+          id="menuToggle"
+          css={css`
+            display: block;
+            padding-top: 20px;
+            padding-left: 20px;
+          `}
+        >
           <span
             css={css`
               display: block;
@@ -70,7 +77,7 @@ const Activities = ({ activities }) => {
               height: 4px;
               margin-bottom: 5px;
               position: relative;
-              background: #cdcdcd;
+              background: grey;
               border-radius: 3px;
               z-index: 1;
             `}
@@ -82,7 +89,7 @@ const Activities = ({ activities }) => {
               height: 4px;
               margin-bottom: 5px;
               position: relative;
-              background: #cdcdcd;
+              background: grey;
               border-radius: 3px;
               z-index: 1;
             `}
@@ -94,7 +101,7 @@ const Activities = ({ activities }) => {
               height: 4px;
               margin-bottom: 5px;
               position: relative;
-              background: #cdcdcd;
+              background: grey;
               border-radius: 3px;
               z-index: 1;
             `}
