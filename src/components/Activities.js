@@ -15,7 +15,7 @@ const Activities = ({ activities }) => {
         width: 100vw;
         height: 100vh;
 
-        @media (max-width: 1000px) {
+        @media (max-width: 800px) {
           grid-template-columns: 80px auto;
           grid-template-areas: "sidebar-mobile $ {showActivities ? 'sidebar-desktop' : 'main'}";
         }
@@ -121,6 +121,7 @@ const Activities = ({ activities }) => {
         className="Detail"
         css={css`
           grid-area: main;
+          display: ${showActivities ? "none" : "block"};
         `}
       >
         {showActivities}
