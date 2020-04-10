@@ -10,7 +10,10 @@ const Activities = ({ activities }) => {
     <div
       className="Activities"
       css={css`
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 30px;
         grid-template-columns: 300px auto;
         width: 100vw;
         height: 100vh;
@@ -70,9 +73,14 @@ const Activities = ({ activities }) => {
         <div
           id="menuToggle"
           css={css`
-            display: block;
+            display: flex;
+            flex-direction: column;
             padding-top: 20px;
             padding-left: 20px;
+            max-width: 70px;
+            &:hover {
+              background-color: lightgrey;
+              cursor: pointer;
           `}
           onClick={() => {
             setShowActivities(!showActivities);
