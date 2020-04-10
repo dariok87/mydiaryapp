@@ -1,7 +1,11 @@
+import { useState } from "react";
+
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
 const Activities = ({ activities }) => {
+  const [showActivities, setShowActivities] = useState(false);
+
   return (
     <div
       className="Activities"
@@ -13,10 +17,11 @@ const Activities = ({ activities }) => {
 
         @media (max-width: 1000px) {
           grid-template-columns: 80px auto;
-          grid-template-areas: "sidebar-mobile main";
+          grid-template-areas: "sidebar-mobile $ {showActivities ? 'sidebar-desktop' : 'main'}";
         }
       `}
     >
+      {showActivities}
       <ul
         className="List"
         css={css`
@@ -27,7 +32,7 @@ const Activities = ({ activities }) => {
           list-style-type: none;
 
           @media (max-width: 800px) {
-            display: none;
+            display: ${showActivities ? "block" : "none"};
           }
         `}
       >
@@ -69,6 +74,9 @@ const Activities = ({ activities }) => {
             padding-top: 20px;
             padding-left: 20px;
           `}
+          onClick={() => {
+            setShowActivities(!showActivities);
+          }}
         >
           <span
             css={css`
@@ -114,7 +122,9 @@ const Activities = ({ activities }) => {
         css={css`
           grid-area: main;
         `}
-      ></div>
+      >
+        {showActivities}
+      </div>
     </div>
   );
 };
