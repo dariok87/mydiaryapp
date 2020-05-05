@@ -138,7 +138,13 @@ const Activities = ({ activities }) => {
           display: ${showActivities ? "none" : "block"};
         `}
       >
-        <h1>{currentActivity.title}</h1>
+        <h1
+          css={css`
+            padding-top: 40px;
+          `}
+        >
+          {currentActivity.title}
+        </h1>
         <p>{currentActivity.description}</p>
       </div>
     </div>
