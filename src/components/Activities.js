@@ -12,15 +12,15 @@ const Activities = ({ activities }) => {
       className="Activities"
       css={css`
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: flex-start;
         padding-left: 30px;
-        grid-template-columns: 300px auto;
+        grid-template-columns: 300px 100%;
         width: 100vw;
         height: 100vh;
 
         @media (max-width: 800px) {
-          grid-template-columns: 80px 100%;
+          grid-template-columns: 80px auto;
           grid-template-areas: "sidebar-mobile ${
             showActivities ? "sidebar-desktop" : "main"
           }";
@@ -53,6 +53,9 @@ const Activities = ({ activities }) => {
                   background-color: lightgrey;
                   cursor: pointer;
               `}
+              onClick={() => {
+                setCurrentActivity(activity);
+              }}
             >
               {activity.title}
             </li>
