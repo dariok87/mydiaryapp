@@ -5,7 +5,7 @@ import { css, jsx } from "@emotion/core";
 
 const Activities = ({ activities }) => {
   const [showActivities, setShowActivities] = useState(false);
-  const [currentActivity, setCurrentActivity] = useState(null);
+  const [currentActivity, setCurrentActivity] = useState({});
 
   return (
     <div
@@ -138,7 +138,8 @@ const Activities = ({ activities }) => {
           display: ${showActivities ? "none" : "block"};
         `}
       >
-        {showActivities}
+        <h1>{currentActivity.title}</h1>
+        <p>{currentActivity.description}</p>
       </div>
     </div>
   );
