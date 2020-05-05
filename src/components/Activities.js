@@ -5,6 +5,7 @@ import { css, jsx } from "@emotion/core";
 
 const Activities = ({ activities }) => {
   const [showActivities, setShowActivities] = useState(false);
+  const [currentActivity, setCurrentActivity] = useState(null);
 
   return (
     <div
@@ -19,8 +20,10 @@ const Activities = ({ activities }) => {
         height: 100vh;
 
         @media (max-width: 800px) {
-          grid-template-columns: 80px auto;
-          grid-template-areas: "sidebar-mobile $ {showActivities ? 'sidebar-desktop' : 'main'}";
+          grid-template-columns: 80px 100%;
+          grid-template-areas: "sidebar-mobile ${
+            showActivities ? "sidebar-desktop" : "main"
+          }";
         }
       `}
     >
